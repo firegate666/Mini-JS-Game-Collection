@@ -105,6 +105,9 @@ function initEvents() {
 					}
 				});
 				if (target != null) {
+					
+					jQuery('#clicks').text(parseInt(jQuery('#clicks').text(), 10)+1);
+					
 					var newPosition = jQuery(target).attr('position');
 					var newLeft = jQuery(target).position().left;
 					var newTop = jQuery(target).position().top;
