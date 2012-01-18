@@ -16,6 +16,7 @@ var freeMappings = {
 
 var moreImages = [
 		'cars2.jpg',
+		'facebook.png',
 		'http://3ost.ru/uploads/posts/2010-05/1274473331_south-park-bigger-longer-uncut-complete-score.jpg',
 		'http://images.community.wizards.com/community.wizards.com/user/dragonlance/595189a911e71c4376e4972a9822d8bc.jpg?v=202500',
 		'http://r21.imgfast.net/users/2111/14/34/03/album/nature20.jpg',
