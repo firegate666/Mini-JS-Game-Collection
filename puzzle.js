@@ -121,6 +121,8 @@ function initEvents() {
 						top : oldTop + 'px',
 						left : oldLeft + 'px'
 					}, 250, 'swing');
+				}else{
+					locked = false;
 				}
 			});
 
