@@ -1,0 +1,100 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.cfix {
+	clear: both;
+}
+
+#selector {
+	height: 450px;
+	width: 450px;
+}
+
+#selector img {
+	width: 140px;
+	height: 140px;
+	margin: 5px 5px;
+}
+
+.wrapper {
+	background-color: #ccc;
+	width: 450px;
+	height: 450px;
+	padding: 15px;
+	border-radius: 15px 15px;
+	float: left;
+	margin-right: 15px;
+}
+
+#container {
+	width: 450px;
+	height: 450px;
+	position: relative;
+}
+
+#container .cell {
+	width: 150px;
+	height: 150px;
+	outline: 1px solid #ccc;
+	float: left;
+}
+
+#container .tile {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	background-image: url("cars2.jpg");
+	overflow: hidden;
+}
+
+#container .tile.topleft {
+	background-position: 0 0;
+}
+
+#container .tile.topcenter {
+	background-position: -150px 0;
+}
+
+#container .tile.topright {
+	background-position: -300px 0;
+}
+
+#container .tile.centerleft {
+	background-position: 0 -150px;
+}
+
+#container .tile.centercenter {
+	background-position: -150px -150px;
+}
+
+#container .tile.centerright {
+	background-position: -300px -150px;
+}
+
+#container .tile.bottomleft {
+	background-position: 0 -300px;
+}
+
+#container .tile.bottomcenter {
+	background-position: -150px -300px;
+}
+
+#container .tile.bottomright {
+	background-position: -300px -300px;
+}
+
+#container .tile.empty {
+	opacity: 0.25;
+}
+
+#controls {
+	width: 450px;
+	padding: 15px;
+}
+
+#controls input {
+	display: block;
+	width: 450px;
+}
