@@ -29,7 +29,7 @@
 }
 
 .wrapper2 {display:table;width: 150px;}
-.wrapper #clicks {display: table-cell; vertical-align: middle;text-align: center; font-size: 32px;}
+.wrapper div {display: table-cell; vertical-align: middle;text-align: center; font-size: 32px;}
 
 #container {
 	width: 450px;
