@@ -62,7 +62,7 @@ function reset() {
 }
 
 function start() {
-	emptyPosition = Math.ceil(Math.random(1, 9) * 9);
+	emptyPosition = Math.ceil((Math.random() * 8)+1);
 	jQuery('#clicks').text(0);
 	positions.shuffle();
 	disorderTiles();
