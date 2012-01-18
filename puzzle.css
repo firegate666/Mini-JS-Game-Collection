@@ -10,6 +10,9 @@
 #selector {
 	height: 450px;
 	width: 450px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
 }
 
 #selector img {
@@ -28,8 +31,17 @@
 	margin-right: 15px;
 }
 
-.wrapper2 {display:table;width: 150px;}
-.wrapper div {display: table-cell; vertical-align: middle;text-align: center; font-size: 32px;}
+.wrapper2 {
+	display: table;
+	width: 150px;
+}
+
+.wrapper2 div {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 32px;
+}
 
 #container {
 	width: 450px;
