@@ -3,6 +3,12 @@
  */
 
 var puzzleGame = {
+		
+	/**
+	 * allowed moving directions for tiles
+	 * 
+	 * @var Object
+	 */
 	freeMappings : {
 		1 : [ 2, 4 ],
 		2 : [ 1, 3, 5 ],
@@ -15,14 +21,34 @@ var puzzleGame = {
 		9 : [ 6, 8 ]
 	},
 
+	/**
+	 * all background position classes
+	 * if tiles have this order, the game is won
+	 * 
+	 * @var Array
+	 */
 	positions : [ 'topleft', 'topcenter', 'topright', 'centerleft',
 			'centercenter', 'centerright', 'bottomleft', 'bottomcenter',
 			'bottomright' ],
 
+	/**
+	 * default position for empty tile
+	 * is randomized during start
+	 * 
+	 * @var integer
+	 */
 	emptyPosition : 5,
 
+	/**
+	 * if true, click binding is ignored
+	 * 
+	 * @var boolean
+	 */
 	locked : false,
 
+	/**
+	 * callback function to check winning status
+	 */
 	wins : function wins() {
 		var winner = true;
 		jQuery.each(puzzleGame.positions, function(k, v) {
@@ -38,11 +64,17 @@ var puzzleGame = {
 		}
 	},
 
+	/**
+	 * reset all defaults, remove all tiles
+	 */
 	reset : function reset() {
 		puzzleGame.locked = false;
 		jQuery('#container .tile').remove();
 	},
 
+	/**
+	 * start game, shuffle and place tiles on grid, init events
+	 */
 	start : function start() {
 		puzzleGame.emptyPosition = Math.ceil((Math.random() * 8) + 1);
 		jQuery('#clicks').text(0);
@@ -51,11 +83,18 @@ var puzzleGame = {
 		puzzleGame.initEvents();
 	},
 
+	/**
+	 * @uses puzzleGame.reset()
+	 * @uses puzzleGame.start()
+	 */
 	restart : function restart() {
 		puzzleGame.reset();
 		puzzleGame.start();
 	},
 
+	/**
+	 * place tiles on grid
+	 */
 	disorderTiles : function disorderTiles() {
 		var i = 1;
 		jQuery('#container .cell').each(
@@ -71,6 +110,9 @@ var puzzleGame = {
 				});
 	},
 
+	/**
+	 * bind click events
+	 */
 	initEvents : function initEvents() {
 		jQuery('#container .tile:not(.empty)').click(
 				function() {
