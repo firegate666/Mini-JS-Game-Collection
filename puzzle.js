@@ -63,7 +63,7 @@ function reset() {
 }
 
 function start() {
-	emptyPosition = Math.ceil((Math.random() * 8)+1);
+	emptyPosition = Math.ceil((Math.random() * 8) + 1);
 	jQuery('#clicks').text(0);
 	positions.shuffle();
 	disorderTiles();
@@ -107,9 +107,10 @@ function initEvents() {
 					}
 				});
 				if (target != null) {
-					
-					jQuery('#clicks').text(parseInt(jQuery('#clicks').text(), 10)+1);
-					
+
+					jQuery('#clicks').text(
+							parseInt(jQuery('#clicks').text(), 10) + 1);
+
 					var newPosition = jQuery(target).attr('position');
 					var newLeft = jQuery(target).position().left;
 					var newTop = jQuery(target).position().top;
@@ -122,7 +123,7 @@ function initEvents() {
 						top : oldTop + 'px',
 						left : oldLeft + 'px'
 					}, 250, 'swing');
-				}else{
+				} else {
 					locked = false;
 				}
 			});
